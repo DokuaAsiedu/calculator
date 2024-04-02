@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-escape */
 import { useState } from "react";
 import { keys } from "./config";
-import { Button } from "./components";
+import { Button, Credit } from "./components";
 import { create, all } from "mathjs";
 
 const config = {};
@@ -66,7 +66,7 @@ export default function App() {
 	};
 
 	return (
-		<div className="h-full min-h-screen py-12 flex flex-col items-center justify-center">
+		<div className="h-full min-h-screen py-12 flex flex-col items-center justify-center gap-4">
 			<div className="h-96 w-11/12 sm:w-2/5 max-w-lg grid grid-rows-[15%_85%] bg-black">
 				<div className="flex flex-col items-end justify-end text-white p-1">
 					<span className="text-3xl">{display}</span>
@@ -84,6 +84,7 @@ export default function App() {
 					})}
 				</div>
 			</div>
+			<Credit />
 		</div>
 	);
 }
